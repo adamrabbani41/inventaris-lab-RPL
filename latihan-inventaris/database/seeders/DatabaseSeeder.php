@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
         // 1. Akun Pengujian v2 (1 Laboran & 2 Siswa)
         User::create([
             'nis_nip'  => '198501012010011001',
-            'name'     => 'Pak Budi (Laboran)',
+            'name'     => 'Pak Jimmy (Laboran)',
             'email'    => 'laboran@simlab.test',
             'role'     => 'laboran',
             'password' => Hash::make('password'),
@@ -33,8 +33,24 @@ class DatabaseSeeder extends Seeder
 
         User::create([
             'nis_nip'  => '242510002',
-            'name'     => 'Siti (Siswa 2)',
-            'email'    => 'siti@simlab.test',
+            'name'     => 'Oliver (Siswa 2)',
+            'email'    => 'oliver@simlab.test',
+            'role'     => 'siswa',
+            'password' => Hash::make('password'),
+        ]);
+        
+        User::create([
+            'nis_nip'  => '242510003',
+            'name'     => 'Veza (Siswa 3)',
+            'email'    => 'veza@simlab.test',
+            'role'     => 'siswa',
+            'password' => Hash::make('password'),
+        ]);
+
+        User::create([
+            'nis_nip'  => '242510004',
+            'name'     => 'Akbar (Siswa 4)',
+            'email'    => 'akbar@simlab.test',
             'role'     => 'siswa',
             'password' => Hash::make('password'),
         ]);
