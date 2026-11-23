@@ -6,9 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Kategori extends Model
 {
-     protected $guarded = ['id'];
+    protected $fillable = [
+        'nama_kategori',
+        'deskripsi',
+    ];
 
-    // Relasi: Satu Kategori memiliki banyak Barang (One-to-Many)
     public function barangs()
     {
         return $this->hasMany(Barang::class);
